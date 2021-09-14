@@ -2,14 +2,15 @@
 
 <div class="container-fluid">
 
-<ul *ngFor='let quote of quotes'>
+<ul *ngFor='let quote of quotes; let i = index'>
     <li>
         {{quote.aQuote}}
     </li>
     <li>
         {{quote.author}}
     </li>
-    <app-quote-details [quote]='quote' ></app-quote-details>
+    <button (click)='toggleDetails(i)' class="btn btn-primary" >Toggle Details</button>
+    <app-quote-details *ngIf='quote.showiSubmit' [quote]='quote' ></app-quote-details>
 </ul>
 
 </div>
