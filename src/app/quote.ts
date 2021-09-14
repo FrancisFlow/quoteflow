@@ -1,5 +1,5 @@
 export class Quote {
-    showiSubmit:boolean;
+    showDetails:boolean;
     constructor(
         public aQuote:string, 
         public author:string,
@@ -10,6 +10,6 @@ export class Quote {
 
     )
     {
-      this.showiSubmit=false;
+      this.showDetails=false;
     }
 }

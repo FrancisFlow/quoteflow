@@ -20,7 +20,7 @@ export class QuotesComponent implements OnInit {
   // toggle between show and hide description
 
   toggleDetails(index: number) {
-    this.quotes[index].showiSubmit= !this.quotes[index].showiSubmit;
+    this.quotes[index].showDetails= !this.quotes[index].showDetails;
   }
 
 //  deleteGoal
