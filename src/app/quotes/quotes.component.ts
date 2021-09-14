@@ -23,6 +23,19 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showiSubmit= !this.quotes[index].showiSubmit;
   }
 
+//  deleteGoal
+
+deleteGoal(yesDelete:boolean, index:number) {
+  if(yesDelete) {
+    let reallyDelete = confirm(
+    `Are you sure you want to delete
+    "${this.quotes[index].aQuote}"?`)
+    if(reallyDelete) {
+      this.quotes.splice(index, 1)
+    }
+  }
+}
+
   constructor() { }
 
   ngOnInit(): void {

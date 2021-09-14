@@ -1,3 +1,7 @@
-<li>
- Submitted by:  {{quote.iSubmit}}
-</li>
+<div class="container-fluid">
+    Submitted by:  {{quote.iSubmit}}
+    <p>Upvote:{{quote.upVote}} <span>Downvote:{{quote.downVote}}</span></p>
+    <button (click)='iWantToDelete(true)' >
+        Delete
+    </button>
+</div>
