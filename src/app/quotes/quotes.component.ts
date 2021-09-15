@@ -17,6 +17,13 @@ export class QuotesComponent implements OnInit {
     new Quote("No matter how the wind howls, the mountain cannot bow to it", "Mula", "Disney Okumu", 0, 0)
   ];
 
+
+  // addNewQuote logic
+
+addNewQuote(quote: Quote){
+  this.quotes.push(quote);
+}
+
   // toggle between show and hide description
 
   toggleDetails(index: number) {

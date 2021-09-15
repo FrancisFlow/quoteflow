@@ -1,6 +1,6 @@
 <!-- now, to present these quotes that I made to the user -->
 <div class="container-fluid">
-    <app-new-quote-form></app-new-quote-form>
+    <app-new-quote-form (addQuote)='addNewQuote($event)' ></app-new-quote-form>
 </div>
 
 <div class="container-fluid">
