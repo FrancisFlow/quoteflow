@@ -1,18 +1,18 @@
-<form action="">
+<form #newQuoteForm='ngForm'>
     <h2>Contribute to the collective wisdom</h2>
         <div class="form-group col-md-6">
          <label for="aQuote">
              Quote goes here
          </label>
-         <textarea id="aQuote" type="text" class="form-control"></textarea>
+         <textarea id="aQuote" type="text" class="form-control" [(ngModel)]='newQuote.aQuote' name='aQuote' #aQuote='ngModel' required></textarea>
         </div>
        <div class="form-group col-md-6">
            <label for="author">Quote Author</label>
-           <input class="form-control" type="text" id="author">
+           <input class="form-control" type="text" id="author"  [(ngModel)]='newQuote.author' name='author' #author='ngModel' required>
        </div>
        <div class="form-group col-md-6">
-           <label for="iSubmit">Your name</label>
-           <input type="text" id="iSubmit" class="form-control">
+           <label for="iSubmit">Your name</label> 
+           <input type="text" id="iSubmit" class="form-control" [(ngModel)]='newQuote.iSubmit' name='iSubmit' #iSubmit='ngModel' required>
        </div>
        <button class="btn btn-success" type="submit">Add Quote</button>
 </form>
