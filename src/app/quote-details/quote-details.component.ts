@@ -13,6 +13,18 @@ export class QuoteDetailsComponent implements OnInit {
 
   iWantToDelete(Delete:boolean) {
     this.yesDelete.emit(Delete);
+  
+  }
+@Output() upVote= new EventEmitter<boolean>();
+
+  upVoteMe(up: boolean) {
+        this.upVote.emit(up);
+      }
+
+@Output() downVote= new EventEmitter<boolean>();
+
+  downVoteMe(down:boolean) {
+      this.downVote.emit(down);
   }
 
   constructor() { }

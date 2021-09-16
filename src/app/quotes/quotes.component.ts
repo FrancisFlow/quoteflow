@@ -43,6 +43,21 @@ deleteGoal(yesDelete:boolean, index:number) {
   }
 }
 
+// upTheVote
+ upTheVote(upVote:boolean, index:number) {
+   if(upVote) {
+   this.quotes[index].upVote++
+   }
+
+ }
+// downTheVote
+
+ downTheVote(downVote:boolean, index:number){
+   if(downVote){
+      this.quotes[index].downVote++ 
+ }
+}
+
   constructor() { }
 
   ngOnInit(): void {

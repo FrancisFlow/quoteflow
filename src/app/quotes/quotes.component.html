@@ -11,7 +11,7 @@
         {{quote.author}}
     </li>
     <button (click)='toggleDetails(i)' class="btn btn-primary" >Toggle Details</button>
-    <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
+    <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (upVote)='upTheVote($event, i)' (downVote)='downTheVote($event, i)' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
 </ul>
 
 </div>
