@@ -1,11 +1,9 @@
 <!-- now, to present these quotes that I made to the user -->
-<div class="container-fluid">
-    <app-new-quote-form (addQuote)='addNewQuote($event)' ></app-new-quote-form>
-</div>
 
 <div class="container-fluid">
 
-<ul *ngFor='let quote of quotes; let i = index'>
+<ul  appHighlightHighestVote
+ *ngFor='let quote of quotes; let i = index'>
     <li>
         {{quote.aQuote}}
     </li>
@@ -16,4 +14,7 @@
     <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
 </ul>
 
+</div>
+<div class="container-fluid">
+    <app-new-quote-form (addQuote)='addNewQuote($event)' ></app-new-quote-form>
 </div>

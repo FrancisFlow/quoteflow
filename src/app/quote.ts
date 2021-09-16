@@ -6,7 +6,8 @@ export class Quote {
         public iSubmit:string,
         
         public upVote:number,
-        public downVote:number
+        public downVote:number,
+        public dayOfPosting: Date
 
     )
     {
