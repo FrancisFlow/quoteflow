@@ -1,6 +1,7 @@
 <div class="container-fluid">
     Submitted by:  {{quote.iSubmit}}
     <p>Upvote:{{quote.upVote}} <span>Downvote:{{quote.downVote}}</span></p>
+    <p> Posted {{quote.dayOfPosting | date}} days ago</p>
     <button (click)='iWantToDelete(true)' >
         Delete
     </button>
