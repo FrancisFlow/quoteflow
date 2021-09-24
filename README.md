@@ -21,7 +21,7 @@ In QuoteFlow a user can create a new quote and post it using a form. The user ca
 * Angular CLI
 ## Support and contact details
 
-For any inquires or feedback on improvement, feel free to contact me at [](francisngigi948@gmail.com).
+For any inquires or feedback on improvement, feel free to contact me a francisngigi948@gmail.com
 
 ## LICENSE
 Licensed under the [MIT-LICENSE](LICENSE)_
