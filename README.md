@@ -24,5 +24,5 @@ In QuoteFlow a user can create a new quote and post it using a form. The user ca
 For any inquires or feedback on improvement, feel free to contact me a francisngigi948@gmail.com
 
 ## LICENSE
-Licensed under the [MIT-LICENSE](LICENSE)_
+Licensed under the [MIT-LICENSE](LICENSE.txt)
     Copyright (c) 2021 **Francis Ngigi**
