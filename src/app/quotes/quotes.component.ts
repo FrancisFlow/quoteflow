@@ -58,6 +58,19 @@ deleteGoal(yesDelete:boolean, index:number) {
  }
 }
 
+
+// highest upvote
+
+highestUpVote() {
+  let highArray=[];
+
+  for(let i = 0; i<this.quotes.length; i++) {
+     highArray.push(this.quotes[i].upVote);
+  }
+  let highestVote = Math.max(...highArray);
+  return highestVote;
+}
+
   constructor() { }
 
   ngOnInit(): void {
