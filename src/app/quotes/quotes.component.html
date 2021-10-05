@@ -1,13 +1,13 @@
 <!-- now, to present these quotes that I made to the user -->
-
+<div class="arrangement" >
 <div class="container-fluid">
-    <div *ngFor='let quote of quotes; let i = index'>
-    <div appHighlightHighestVote *ngIf='highestUpVote()===quote.upVote' >
+    <div  class="col-md-9" *ngFor='let quote of quotes; let i = index'>
+    <div appHighlightHighestVote *ngIf='highestUpVote()=== quote.upVote' >
 
         <!-- <div appHighlightHighestVote *ngIf='highestUpVote()===quote.upVote' > -->
-       <div>{{quote.aQuote}}</div>
-       <div>
-        {{quote.author}}
+       <div class="quoteHi" >{{quote.aQuote}}</div>
+       <div class="quoteAuthor">
+         ~{{quote.author}}
        </div>
     <button (click)='toggleDetails(i)' class="btn btn-primary" >Toggle Details</button>
     <app-quote-details  *ngIf='quote.showDetails' [quote]='quote' (upVote)='upTheVote($event, i)' (downVote)='downTheVote($event, i)' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
@@ -15,18 +15,19 @@
 </div> 
 </div> 
 <div class="container-fluid">
-<div *ngFor='let quote of quotes; let i = index'>
+<div class="col-md-9" *ngFor='let quote of quotes; let i = index'>
     <div *ngIf='highestUpVote()!=quote.upVote' >
 
         <!-- <div appHighlightHighestVote *ngIf='highestUpVote()===quote.upVote' > -->
-       <div>{{quote.aQuote}}</div>
-       <div>
-        {{quote.author}}
+       <div class="quoteHi" >{{quote.aQuote}}
+
+       <div class="quoteAuthor"  >  ~{{quote.author}} </div>
+       <button (click)='toggleDetails(i)' class="btn btn-primary" >Toggle Details</button>
        </div>
-    <button (click)='toggleDetails(i)' class="btn btn-primary" >Toggle Details</button>
-    <app-quote-details  *ngIf='quote.showDetails' [quote]='quote' (upVote)='upTheVote($event, i)' (downVote)='downTheVote($event, i)' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
+           <app-quote-details  *ngIf='quote.showDetails' [quote]='quote' (upVote)='upTheVote($event, i)' (downVote)='downTheVote($event, i)' (yesDelete)='deleteGoal($event, i)' ></app-quote-details>
     </div>
 </div> 
+</div>
 </div>
 
 
@@ -35,3 +36,4 @@
 <div class="container-fluid">
     <app-new-quote-form (addQuote)='addNewQuote($event)' ></app-new-quote-form>
 </div>
+

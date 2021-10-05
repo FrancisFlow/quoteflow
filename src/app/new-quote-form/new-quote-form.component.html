@@ -1,5 +1,8 @@
-<form  (ngSubmit)='submitQuote()' #newQuoteForm='ngForm'>
-    <h2>Contribute to the collective wisdom</h2>
+<div class="form-center" >
+
+<form (ngSubmit)='submitQuote()' #newQuoteForm='ngForm'>
+    <h2 class="center">Post your favorite quote</h2>
+    <div class="bluePrint form-center" >
         <div class="form-group col-md-6">
          <label for="aQuote">
              Quote goes here
@@ -16,7 +19,8 @@
            <label for="iSubmit">Your name</label> 
            <input type="text" id="iSubmit" class="form-control" [(ngModel)]='newQuote.iSubmit' name='iSubmit' #iSubmit='ngModel' required>
        </div>
-       <button class="btn btn-success" type="submit">Add Quote</button>
+       <button class="btn btn-success center-button" type="submit">Post Quote</button>
        
-       
+     </div>  
 </form>
+</div>
